@@ -1,0 +1,13 @@
+
+replicaCount: 1
+containerPort: "8080"
+namespace: default
+image:
+  repository: 120700353163.dkr.ecr.us-east-2.amazonaws.com/hello-world
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+imagePullSecrets: []
+service:
+  type: LoadBalancer
+  port: 80
